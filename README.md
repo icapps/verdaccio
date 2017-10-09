@@ -1,0 +1,2 @@
+# verdaccio
+iCapps custom Verdaccio
