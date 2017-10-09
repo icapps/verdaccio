@@ -5,7 +5,7 @@ services:
     image: verdaccio/verdaccio:latest
     container_name: verdaccio
     ports:
-      - "8080:8000"
+      - "8080:4873"
     volumes:
         - "./storage:/verdaccio/storage"
         - "./conf:/verdaccio/conf"
