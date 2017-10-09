@@ -11,14 +11,14 @@
 #
 
 # path to a directory with all packages
-storage: /verdaccio/storage
+storage: ../storage
 
 auth:
   htpasswd:
-    file: /verdaccio/conf/htpasswd
+    file: ./htpasswd
     # Maximum amount of users allowed to register, defaults to "+inf".
     # You can set this to -1 to disable registration.
-    #max_users: 1000
+    max_users: 1000
 
 # a list of other known repositories we can talk to
 uplinks:
@@ -51,3 +51,15 @@ packages:
 logs:
   - {type: stdout, format: pretty, level: http}
   #- {type: file, path: verdaccio.log, level: info}
+
+web:
+  # web interface is disabled by default in 0.x, will be enabled soon in 1.x
+  # when all its issues will be fixed
+  #
+  # set this to `true` if you want to experiment with web ui now;
+  # this has a lot of issues, e.g. no auth yet, so use at your own risk
+  enable: true
+
+  title: iCapps - Verdaccio
+  # logo: logo.png
+  # template: custom.hbs
