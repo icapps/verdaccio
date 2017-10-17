@@ -2,6 +2,7 @@ version: '2'
 
 services:
   verdaccio:
+    restart: always
     image: verdaccio/verdaccio:latest
     container_name: verdaccio
     ports:
